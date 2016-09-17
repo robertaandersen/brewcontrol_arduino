@@ -1,4 +1,4 @@
-#include <OneWire.h> 
+#include <OneWire.h>
 //Pinout fra adafruit:
 //  Hvitt (einlitt): Jord
 //  Blatt: signal
@@ -6,12 +6,15 @@
 
 
 int DS18S20_Pin = 2; //DS18S20 Signal pin on digital 2
+String lastError = ""; 
 
 //Temperature chip i/o
 OneWire ds(DS18S20_Pin);  // on digital pin 2
 
 float getTemp(){
   //returns the temperature from one DS18S20 in DEG Celsius
+
+  lastError = ""; 
 
   byte data[12];
   byte addr[8];
@@ -23,12 +26,12 @@ float getTemp(){
   }
 
   if ( OneWire::crc8( addr, 7) != addr[7]) {
-      Serial.println("CRC is not valid!");
-      return -1000;
+      lastError = "CRC is not valid!";
+      //return -1000;
   }
 
   if ( addr[0] != 0x10 && addr[0] != 0x28) {
-      Serial.print("Device is not recognized");
+      lastError = "Device is not recognized";
       return -1000;
   }
 

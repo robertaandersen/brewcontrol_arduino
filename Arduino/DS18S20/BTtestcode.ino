@@ -1,6 +1,6 @@
-void setup()
+void setupBTTest()
 {
-  char temp;
+  /*char temp;
   pinMode(13,OUTPUT);
   Serial.begin(9600);
   
@@ -15,10 +15,6 @@ void setup()
         digitalWrite(13,LOW);
       Serial.print(temp);
     }
-  }
+  }*/
 }
 
-void loop()
-{
-
-}

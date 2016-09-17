@@ -1,4 +1,4 @@
-int ledPin = 13;
+/*int ledPin = 13;
 int ledState = LOW;
 
 void blinkSetup()
@@ -12,4 +12,4 @@ void blink()
   digitalWrite(ledPin, ledState);
   delay(5);
   digitalWrite(ledPin, LOW);
-}
+}*/
