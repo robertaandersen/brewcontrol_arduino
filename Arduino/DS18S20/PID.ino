@@ -35,6 +35,9 @@ void loop()
     if (t > 0) {
       sum += t;
     }
+    else {
+      sum += getAverage()
+    }
 
     setCurrentMeasure(duration, t, getAverage(), lastError);
     Serial.println(getJSON());
