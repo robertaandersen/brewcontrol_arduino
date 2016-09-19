@@ -36,14 +36,16 @@ void loop()
       sum += t;
     }
     else {
-      sum += getAverage()
+      sum += getAverage();
     }
 
     setCurrentMeasure(duration, t, getAverage(), lastError);
-    Serial.println(getJSON());
+    //Serial.println(getJSON());
+    Serial.println(t);
+
 
   }
-  delay(1000);
+  delay(10);
   duration += 1;
 }
 
