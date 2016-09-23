@@ -41,7 +41,7 @@ void loop()
 
     setCurrentMeasure(duration, t, getAverage(), lastError);
     //Serial.println(getJSON());
-    Serial.println(t);
+    Serial.println("-->" + String(t));
 
 
   }
